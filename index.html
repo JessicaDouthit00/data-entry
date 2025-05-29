@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Condition Entry Website</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f3e8ff; /* pale purple */
+      color: #333;
+      padding: 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    nav {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #5a189a;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    form {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 20px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .section {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 2px solid #eee;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background-color: #f0f0f0;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #5a189a; /* dark purple */
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #3c096c;
+    }
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      color: #666;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="control.html">Control</a>
+    <a href="condition1.html">Condition 1</a>
+    <a href="condition2.html">Condition 2</a>
+  </nav>
+
+
+  <hr>
+
+  <h1>Welcome to the Condition Entry Site</h1>
+  <p>Select a page above to enter participant condition data.</p>
+
+  <!-- Participant Info Section -->
+  <form>
+    <h2>Participant Information</h2>
+    <label>Participant Code:</label>
+    <input type="text" name="participant_code" placeholder="BC____" />
+
+    <label>Testing Date:</label>
+    <input type="text" name="testing_date" placeholder="MM/DD/25" />
+
+    <label>Condition 1:</label>
+    <input type="text" name="condition1" placeholder="EOD / VEST" />
+
+    <label>Vest Condition:</label>
+    <input type="text" name="vest_condition" />
+
+    <label>Age:</label>
+    <input type="number" name="age" />
+
+    <label>Birthdate:</label>
+    <input type="text" name="birthdate" />
+
+    <label>Sex:</label>
+    <input type="text" name="sex" />
+
+    <label>Height:</label>
+    <input type="text" name="height" />
+
+    <label>Torso (cm):</label>
+    <input type="text" name="torso" />
+
+    <label>Femur (cm):</label>
+    <input type="text" name="femur" />
+
+    <label>Shank (cm):</label>
+    <input type="text" name="shank" />
+
+    <label>Handgrip 1 (kg):</label>
+    <input type="text" name="handgrip1" />
+
+    <label>Handgrip 2 (kg):</label>
+    <input type="text" name="handgrip2" />
+
+    <label>Handgrip 3 (kg):</label>
+    <input type="text" name="handgrip3" />
+
+    <label>Weight (kg):</label>
+    <input type="text" name="weight" />
+
+    <label>Body Comp:</label>
+    <input type="text" name="body_comp" />
+
+    <button type="submit">Submit Participant Info</button>
+  </form>
+
+  <!-- Warm-Up: Vertical Jump Section -->
+  <div class="section">
+    <h2>Warm-Up: Vertical Jump</h2>
+    <form>
+      <table>
+        <tr>
+          <th>Trial</th>
+          <th>Jump Height</th>
+          <th>Landing Force</th>
+          <th>Asymmetry</th>
+          <th>Peak Power/BM</th>
+          <th>RSI-Modified</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td><input name="vj1_height"></td>
+          <td><input name="vj1_force"></td>
+          <td><input name="vj1_asym"></td>
+          <td><input name="vj1_power"></td>
+          <td><input name="vj1_rsi"></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><input name="vj2_height"></td>
+          <td><input name="vj2_force"></td>
+          <td><input name="vj2_asym"></td>
+          <td><input name="vj2_power"></td>
+          <td><input name="vj2_rsi"></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><input name="vj3_height"></td>
+          <td><input name="vj3_force"></td>
+          <td><input name="vj3_asym"></td>
+          <td><input name="vj3_power"></td>
+          <td><input name="vj3_rsi"></td>
+        </tr>
+      </table>
+      <label>RPE:</label>
+      <input name="vj_rpe">
+      <button type="submit">Submit Warm-Up</button>
+    </form>
+  </div>
+
+  <footer>
+    Website by Jessica Douthit
+  </footer>
+
+</body>
+</html>
+
+

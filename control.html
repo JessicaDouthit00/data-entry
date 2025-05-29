@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Control Entry</title>
+  <style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f3e8ff;
+    color: #333;
+    padding: 40px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  nav {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #5a189a;
+    font-weight: bold;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+  h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  .section {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+  }
+  h2 {
+    margin-top: 0;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+  }
+  th {
+    background-color: #f0f0f0;
+  }
+  input, select, textarea {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #5a189a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  button:hover {
+    background-color: #3c096c;
+  }
+  footer {
+    text-align: center;
+    margin-top: 60px;
+    color: #666;
+    font-size: 0.9em;
+  }
+</style>
+
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="control.html">Control</a>
+    <a href="condition1.html">Condition 1</a>
+    <a href="condition2.html">Condition 2</a>
+  </nav>
+
+
+  <h1>Control Condition Entry</h1>
+
+  <div class="section">
+    <h2>Postural Stability</h2>
+    <form>
+      <table>
+        <tr>
+          <th>Direction</th>
+          <th>Stability Index</th>
+          <th>Sway Index</th>
+        </tr>
+        <tr>
+          <td>Overall</td>
+          <td><input name="stability_overall_si"></td>
+          <td><input name="stability_overall_sway"></td>
+        </tr>
+        <tr>
+          <td>Forward/Backward</td>
+          <td><input name="stability_fb_si"></td>
+          <td><input name="stability_fb_sway"></td>
+        </tr>
+        <tr>
+          <td>Left/Right</td>
+          <td><input name="stability_lr_si"></td>
+          <td><input name="stability_lr_sway"></td>
+        </tr>
+      </table>
+
+      <h3 style="margin-top: 20px">% Time in Zones / Quadrants</h3>
+      <table>
+        <tr>
+          <th>A</th><th>B</th><th>C</th><th>D</th>
+        </tr>
+        <tr>
+          <td><input name="zone_A"></td>
+          <td><input name="zone_B"></td>
+          <td><input name="zone_C"></td>
+          <td><input name="zone_D"></td>
+        </tr>
+        <tr>
+          <th>1</th><th>2</th><th>3</th><th>4</th>
+        </tr>
+        <tr>
+          <td><input name="quad_1"></td>
+          <td><input name="quad_2"></td>
+          <td><input name="quad_3"></td>
+          <td><input name="quad_4"></td>
+        </tr>
+      </table>
+
+      <label for="rpe_postural">RPE:</label>
+      <input type="text" name="rpe_postural" />
+
+      <button type="submit">Submit Postural Stability</button>
+    </form>
+  </div>
+
+  <div class="section">
+    <h2>Free Squat Assessment</h2>
+    <form>
+      <table>
+        <tr>
+          <th>Trial</th>
+          <th>Peak Force</th>
+          <th>Asymmetry</th>
+          <th>Max Neg Displacement</th>
+          <th>Concentric Peak Power</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td><input name="fs1_pf"></td>
+          <td><input name="fs1_asym"></td>
+          <td><input name="fs1_mnd"></td>
+          <td><input name="fs1_cpp"></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><input name="fs2_pf"></td>
+          <td><input name="fs2_asym"></td>
+          <td><input name="fs2_mnd"></td>
+          <td><input name="fs2_cpp"></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><input name="fs3_pf"></td>
+          <td><input name="fs3_asym"></td>
+          <td><input name="fs3_mnd"></td>
+          <td><input name="fs3_cpp"></td>
+        </tr>
+      </table>
+      <label>RPE:</label>
+      <input name="rpe_free_squat">
+      <button type="submit">Submit Free Squat</button>
+    </form>
+  </div>
+
+</body>
+</html>
+
+
+
+  <div class="section">
+    <h2>Limits of Stability</h2>
+    <form>
+      <table>
+        <tr>
+          <th>Direction</th>
+          <th>Angle</th>
+          <th>% of Standard</th>
+        </tr>
+        <tr><td>Forward</td><td><input name="los_forward_angle"></td><td><input name="los_forward_std"></td></tr>
+        <tr><td>Forward/Right</td><td><input name="los_fr_angle"></td><td><input name="los_fr_std"></td></tr>
+        <tr><td>Right</td><td><input name="los_right_angle"></td><td><input name="los_right_std"></td></tr>
+        <tr><td>Backward/Right</td><td><input name="los_br_angle"></td><td><input name="los_br_std"></td></tr>
+        <tr><td>Backward</td><td><input name="los_back_angle"></td><td><input name="los_back_std"></td></tr>
+        <tr><td>Backward/Left</td><td><input name="los_bl_angle"></td><td><input name="los_bl_std"></td></tr>
+        <tr><td>Left</td><td><input name="los_left_angle"></td><td><input name="los_left_std"></td></tr>
+        <tr><td>Forward/Left</td><td><input name="los_fl_angle"></td><td><input name="los_fl_std"></td></tr>
+      </table>
+      <label>Composite Score:</label>
+      <input name="los_composite">
+      <label>Average Trial Time:</label>
+      <input name="los_avg_time">
+      <label>RPE:</label>
+      <input name="los_rpe">
+      <button type="submit">Submit Limits of Stability</button>
+    </form>
+  </div>
+
+  <div class="section">
+    <h2>Squat to Bench Assessment</h2>
+    <form>
+      <table>
+        <tr>
+          <th>Trial</th>
+          <th>Peak Force</th>
+          <th>Asymmetry</th>
+          <th>Max Neg Displacement</th>
+          <th>Concentric Peak Power/BM</th>
+        </tr>
+        <tr><td>1</td><td><input name="bench1_pf"></td><td><input name="bench1_asym"></td><td><input name="bench1_mnd"></td><td><input name="bench1_cpp"></td></tr>
+        <tr><td>2</td><td><input name="bench2_pf"></td><td><input name="bench2_asym"></td><td><input name="bench2_mnd"></td><td><input name="bench2_cpp"></td></tr>
+        <tr><td>3</td><td><input name="bench3_pf"></td><td><input name="bench3_asym"></td><td><input name="bench3_mnd"></td><td><input name="bench3_cpp"></td></tr>
+      </table>
+      <label>RPE:</label>
+      <input name="bench_rpe">
+      <button type="submit">Submit Squat to Bench</button>
+    </form>
+  </div>
+
+  <div class="section">
+    <h2>Star Excursion Balance Test</h2>
+    <form>
+      <table>
+        <tr>
+          <th>Trial</th><th>Side</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th>
+        </tr>
+        <tr><td>1</td><td>Right</td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td></tr>
+        <tr><td>1</td><td>Left</td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td></tr>
+        <tr><td>2</td><td>Right</td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td></tr>
+        <tr><td>2</td><td>Left</td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td></tr>
+        <tr><td>3</td><td>Right</td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td></tr>
+        <tr><td>3</td><td>Left</td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td><td><input></td></tr>
+      </table>
+      <label>RPE:</label>
+      <input name="seb_rpe">
+      <button type="submit">Submit Balance Test</button>
+    </form>
+  </div>
+
+  <div class="section">
+  <h2>Functional Movement Test</h2>
+  <form>
+    <label>Deep Squat:</label>
+    <input type="text" name="deep_squat" />
+
+    <label>RPE:</label>
+    <input type="text" name="deep_squat_rpe" />
+
+    <label>In-line Lunge - Right:</label>
+    <input type="text" name="inline_lunge_r" />
+
+    <label>In-line Lunge - Left:</label>
+    <input type="text" name="inline_lunge_l" />
+
+    <label>RPE:</label>
+    <input type="text" name="inline_lunge_rpe" />
+
+    <label>Hurdle Step - Right:</label>
+    <input type="text" name="hurdle_step_r" />
+
+    <label>Hurdle Step - Left:</label>
+    <input type="text" name="hurdle_step_l" />
+
+    <label>RPE:</label>
+    <input type="text" name="hurdle_step_rpe" />
+
+    <button type="submit">Submit Functional Movement Test</button>
+  </form>
+</div>
+
+
+</body>
+</html>
